@@ -3,6 +3,13 @@
  * GET home page.
  */
 
+
 exports.index = function(req, res){
-  res.render('index', { title: 'My Blog' });
+
+  var data = {title: "test"};
+
+  console.log(test);
+
+
+  res.render('index', data);
 };
