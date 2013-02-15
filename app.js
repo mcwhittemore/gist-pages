@@ -3,15 +3,18 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes')
-  , user = require('./routes/user')
-  , http = require('http')
-  , path = require('path');
+var express = require('express'),
+  routes = require('./routes'),
+  http = require('http'),
+  db = require("./lib/github.js"),
+  path = require('path');
+
+
+
+/* ============================================================================ ***/
 
 var app = express();
-
-app.locals.test = "testsssss";
+app.github = db.init(__dirname+"/config");
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -29,9 +32,10 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/', function(req, res){ routes.index(req, res, app.github); });
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
+
+
