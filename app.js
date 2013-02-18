@@ -33,6 +33,7 @@ app.configure('development', function(){
 });
 
 app.get('/', function(req, res){ routes.index(req, res, app.github); });
+app.get('/test', function(req, res){ routes.test(req, res, app.github); });
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
