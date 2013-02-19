@@ -7,9 +7,9 @@ exports.github = {};
  */
 exports.index = function(req, res){
   	
-  	var blog_ids = exports.github.getGroupPosts("Blog");
+  	var blog_ids = exports.github.getGroupGists("Blog");
     
-    var all_ids = exports.github.getGroupPosts("fileTypes", true);
+    var all_ids = exports.github.getGroupGists("fileTypes", true);
 
     res.render('index', {all_ids: all_ids, blog_ids: blog_ids});
 };
@@ -18,7 +18,7 @@ exports.index = function(req, res){
 exports.details = function(req, res){
 
   var post_id = req.params.post_id;
-  var post = exports.github.getPost(post_id);
+  var post = exports.github.getGist(post_id);
 
   res.render("detail", post);
 
