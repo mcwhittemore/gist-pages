@@ -71,6 +71,8 @@ Returns an set of gist ids that match the passed group object from the passed da
 
 ## Gist Object
 
+The [standard gist object](http://developer.github.com/v3/gists/#get-a-single-gist) returned by the github api along with a few extra fields.
+
 ### .css
 
 The html github provides to call the needed css for styling .html.
