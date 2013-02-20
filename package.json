@@ -1,6 +1,6 @@
 {
   "name": "gist-pages",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Matthew Chase Whittemore <mcwhittemore@gmail.com>",
   "description": "Express meets gist.github.com to create an open blogging platform.",
   "contributors": [

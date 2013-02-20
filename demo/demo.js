@@ -7,10 +7,10 @@ var routes = require('./routes');
 
 var config = {
   //THE USERS WHOSE PUBLIC GISTS WILL BE USED
-  username: "YOURUSERNAME",
+  username: "mcwhittemore",
   //THE GROUPING RULES. LEAFS SHOULD BE REGEX
   groupRules: {
-    "Blog" : /^Blog_/,
+    "Blog" : /^Project_/,
     "fileTypes": {
       "markdown": /.md$/,
       "javascript": /.js$/
