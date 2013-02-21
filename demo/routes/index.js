@@ -19,6 +19,7 @@ exports.details = function(req, res){
 
   var post_id = req.params.post_id;
   var post = exports.github.getGist(post_id);
+  console.log(post.files);
 
   res.render("detail", post);
 
