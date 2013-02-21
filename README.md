@@ -65,7 +65,7 @@ Returns an set of gist ids that match the passed group object from the passed da
 
 	var blog_ids = github.getGroupGists("Blog", true);
 
-* group: a string or object used to filter gists. All children will be returned.
+* group: a string, object or array of strings and objects used to filter gists. All children will be returned.
 * flatten: return the ids as an array or as a tree. Default is false.
 * data: an object to select from. Default is the github.group object.
 
