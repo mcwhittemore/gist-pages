@@ -80,3 +80,7 @@ The html github provides to call the needed css for styling .html.
 ### .html
 
 The html of all the files in the gist.
+
+### .files.FILENAME.raw
+
+The raw value of each file has been added to the file object under gist.files.
